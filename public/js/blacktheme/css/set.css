@@ -1,0 +1,33 @@
+/**** Photo demo ****/
+
+.photos .photo {
+  width: 250px;
+  margin: 5px;
+  float: left;
+}
+
+.photos .photo img {
+  display: block;
+  width: 60%;
+}
+
+#content {
+  margin-left: 210px;
+}
+
+.demos #content {
+  height: 100%;
+}
+
+/**** Docs ****/
+
+.docs #content {
+  max-width: 640px;
+}
+
+.docs #content a:hover {
+  border-bottom: 1px dotted;
+}
+
+
+

@@ -1,0 +1,115 @@
+@CHARSET "UTF-8";
+.sbHolder{
+	font-weight: normal;
+	position: relative;
+	height:22px;
+	float:left;
+	outline:none;
+	width: 100%;
+	line-height:22px;
+	background:#8B7666;
+}
+.language .sbHolder{
+	background-color:#FFF;
+}
+.language .sbSelector:link, 
+.language .sbSelector:visited, 
+.language .sbSelector:hover, .sbSelector:active{
+	font-size:11px;
+	color:#666;
+	text-align:left;
+}
+.language .sbToggle{
+	background:url(../images/arrow_black.png) no-repeat center;
+}
+
+.sbHolder:focus .sbSelector{
+	outline: none !important;
+}
+.sbSelector{
+	display: block;
+	height: 22px;
+	left: 0;
+	line-height: 22px;
+	outline: none;
+	text-align:left;
+	padding-right:26px;
+}
+.sbSelector:link, .sbSelector:visited, .sbSelector:hover, .sbSelector:active{
+	color: #FFF;
+	outline: none !important;
+	text-decoration: none;
+	font-weight:normal;
+	font-size: 11px;
+	line-height:20px;
+	text-align:center;
+}
+.sbToggle{
+	background:url(../images/arrow.png) no-repeat center;
+	height: 22px;
+	width: 22px;
+	outline: none !important;
+	position:absolute;
+	right:0;
+}
+
+.sbOptions{
+	background-color:#EEE;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 22px !important;
+	left:0;
+	width: 100%;
+	z-index: 5000;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.sbOptions li{
+	padding: 0px;
+}
+.sbOptions a{
+	display: block;
+	outline: none;
+	padding: 4px 8px;
+	font-size:11px;
+}
+#content-default-page .sbOptions a, .filter-sort .sbOptions a{
+	padding:6px 4px;
+}
+.sbOptions a:link, 
+.sbOptions a:visited{
+	color: #656464;
+	text-decoration: none;
+	-webkit-transition:All 0.3s ease;
+	-moz-transition:All 0.3s ease;
+	-o-transition:All 0.3s ease;
+}
+.sbOptions a:hover,
+.sbOptions a:focus,
+.sbOptions a.sbFocus{
+	color: #FFF;
+	font-weight:normal;
+	font-size:11px;
+	background:#372619;
+}
+.sbOptions li.last a{
+	border-bottom: none;
+}
+.sbOptions .sbDisabled{
+	border-bottom: dotted 1px #515151;
+	color: #999;
+	display: block;
+	padding: 7px 0 7px 3px;
+}
+.sbOptions .sbGroup{
+	border-bottom: dotted 1px #515151;
+	color: #EBB52D;
+	display: block;
+	font-weight: bold;
+	padding: 7px 0 7px 3px;
+}
+.sbOptions .sbSub{
+	padding-left: 17px;
+}

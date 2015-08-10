@@ -1,0 +1,10 @@
+# ignore forder #
+###################
+.quarantine
+.tmb
+.env
+
+# ignore file #
+###################
+.DS_Store
+sftp-config.json

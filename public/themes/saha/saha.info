@@ -1,0 +1,9 @@
+Theme Name: saha
+Theme URL: http://www.rsu.ac.th/studentdevelop
+Version: 1.0
+Description: saha theme.
+
+areas[navigation] = Navigation
+areas[breadcrumb] = Breadcrumb
+areas[sidebar] = Sidebar
+areas[footer] = Footer

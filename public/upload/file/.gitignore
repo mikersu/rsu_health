@@ -1,0 +1,6 @@
+# ignore file #
+###################
+*
+!.htaccess
+!.gitignore
+!index.html

@@ -1,0 +1,9 @@
+Theme Name: RSU_Health
+Theme URL: http://www.facebook.com/mikeemc
+Version: 1.0
+Description: RSU_Health Theme.
+
+areas[navigation] = Navigation
+areas[breadcrumb] = Breadcrumb
+areas[sidebar] = Sidebar
+areas[footer] = Footer

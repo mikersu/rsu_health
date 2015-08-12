@@ -32,81 +32,81 @@
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
 <body class="login">
-  <!-- BEGIN LOGO -->
-  <div class="logo">
-    <img src="<?php echo $this->theme_path ?>public/img/logo.png" alt="">
-  </div>
-  <!-- END LOGO -->
-  <!-- BEGIN LOGIN -->
-  <div class="content">
-    <!-- BEGIN LOGIN FORM -->
-    <?php echo form_open( current_url().( isset( $go_to ) ? '?rdr='.$go_to : '' ), array( 'onsubmit' => 'return ajax_admin_login($(this));' ) ); ?> 
-      <h3 class="form-title">Login to your account</h3>
+	<!-- BEGIN LOGO -->
+	<div class="logo">
+		<img src="<?php echo $this->theme_path ?>public/img/logorsu.jpg" alt="">
+	</div>
+	<!-- END LOGO -->
+	<!-- BEGIN LOGIN -->
+	<div class="content">
+		<!-- BEGIN LOGIN FORM -->
+		<?php echo form_open( current_url().( isset( $go_to ) ? '?rdr='.$go_to : '' ), array( 'onsubmit' => 'return ajax_admin_login($(this));' ) ); ?> 
+		<h3 class="form-title">Login to your account</h3>
 		<div class="hide set_error"></div>
-      <div class="control-group">
-        <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
-        <label class="control-label visible-ie8 visible-ie9">Username</label>
-        <div class="controls">
-          <div class="input-icon left">
-            <i class="icon-user"></i>
-            <input class="m-wrap placeholder-no-fix" autocomplete='off' type="text" placeholder="Username" name="username" autofocus />
-          </div>
-        </div>
-      </div>
-      <div class="control-group">
-        <label class="control-label visible-ie8 visible-ie9">Password</label>
-        <div class="controls">
-          <div class="input-icon left">
-            <i class="icon-lock"></i>
-            <input class="m-wrap placeholder-no-fix" type="password" placeholder="Password" name="password"/>
-          </div>
-        </div>
-      </div>
-      <div class="form-actions">
-        <label class="btn green pull-left fancybox fancybox.iframe" href="<?php echo site_url( 'member/view_forgetpassword' ) ?>" >
-        	Forget Password
-        </label>
-        <button type="submit" class="btn green pull-right login-button">
-        Login <i class="m-icon-swapright m-icon-white"></i>
-        </button>            
-      </div>
+		<div class="control-group">
+			<!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+			<label class="control-label visible-ie8 visible-ie9">Username</label>
+			<div class="controls">
+				<div class="input-icon left">
+					<i class="icon-user"></i>
+					<input class="m-wrap placeholder-no-fix" autocomplete='off' type="text" placeholder="Username" name="username" autofocus />
+				</div>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label visible-ie8 visible-ie9">Password</label>
+			<div class="controls">
+				<div class="input-icon left">
+					<i class="icon-lock"></i>
+					<input class="m-wrap placeholder-no-fix" type="password" placeholder="Password" name="password"/>
+				</div>
+			</div>
+		</div>
+		<div class="form-actions">
+			<label class="btn green pull-left fancybox fancybox.iframe" href="<?php echo site_url( 'member/view_forgetpassword' ) ?>" >
+				Forget Password
+			</label>
+			<button type="submit" class="btn green pull-right login-button">
+				Login <i class="m-icon-swapright m-icon-white"></i>
+			</button>            
+		</div>
 
-    <?php echo form_close(); ?> 
-    <?php echo $this->modules_plug->do_action( 'admin_login_page' ); ?>
-    <!-- END LOGIN FORM -->        
+		<?php echo form_close(); ?> 
+		<?php echo $this->modules_plug->do_action( 'admin_login_page' ); ?>
+		<!-- END LOGIN FORM -->        
 
 
-  </div>
-  <!-- END LOGIN -->
-  <!-- BEGIN COPYRIGHT -->
-  <div class="copyright">
-    2013 &copy; Bizidea. Backoffice Engine.
-  </div>
-  <!-- END COPYRIGHT -->
-  <!-- BEGIN JAVASCRIPTS -->
-  <script src="<?php echo $this->theme_path; ?>assets/js/jquery-1.8.3.min.js"></script>
-  <script src="<?php echo $this->theme_path; ?>assets/bootstrap/js/bootstrap.min.js"></script>  
-  <script src="<?php echo $this->theme_path; ?>assets/uniform/jquery.uniform.min.js"></script> 
-  <script src="<?php echo $this->theme_path; ?>assets/js/jquery.blockui.js"></script>
-  <script src="<?php echo $this->theme_path; ?>assets/jquery-validation/dist/jquery.validate.min.js"></script>
-  <script src="<?php echo $this->theme_path; ?>assets/fancybox/source/jquery.fancybox.js"></script>
-  <script src="<?php echo $this->theme_path; ?>assets/js/app.js"></script>
+	</div>
+	<!-- END LOGIN -->
+	<!-- BEGIN COPYRIGHT -->
+	<div class="copyright">
+		2015 &copy; , Mr.Cherdpong All Rights Reserved.
+	</div>
+	<!-- END COPYRIGHT -->
+	<!-- BEGIN JAVASCRIPTS -->
+	<script src="<?php echo $this->theme_path; ?>assets/js/jquery-1.8.3.min.js"></script>
+	<script src="<?php echo $this->theme_path; ?>assets/bootstrap/js/bootstrap.min.js"></script>  
+	<script src="<?php echo $this->theme_path; ?>assets/uniform/jquery.uniform.min.js"></script> 
+	<script src="<?php echo $this->theme_path; ?>assets/js/jquery.blockui.js"></script>
+	<script src="<?php echo $this->theme_path; ?>assets/jquery-validation/dist/jquery.validate.min.js"></script>
+	<script src="<?php echo $this->theme_path; ?>assets/fancybox/source/jquery.fancybox.js"></script>
+	<script src="<?php echo $this->theme_path; ?>assets/js/app.js"></script>
 
-  <script>
-    jQuery(document).ready(function() {     
-      App.initLogin();
-      $('.fancybox').fancybox({
+	<script>
+		jQuery(document).ready(function() {     
+			App.initLogin();
+			$('.fancybox').fancybox({
   //     	maxWidth	: 300,
-		width 	: 500,
+  width 	: 500,
 
-      });
-    });
+});
+		});
 
-	function ajax_admin_login( thisobj ) {
-		var serialize_val = thisobj.serialize();
+		function ajax_admin_login( thisobj ) {
+			var serialize_val = thisobj.serialize();
 
-	
-		
+			
+			
 		// disable submit button.
 		$( '.login-button' ).attr( 'disabled', 'disabled' );
 		
@@ -148,8 +148,8 @@
 	}// ajax_admin_login
 
 
-  </script>
-  <!-- END JAVASCRIPTS -->
+</script>
+<!-- END JAVASCRIPTS -->
 </body>
 <!-- END BODY -->
 </html>

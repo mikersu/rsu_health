@@ -7,132 +7,7 @@ class about_model extends CI_Model
         parent::__construct();
     }// __construct
 	
-    public function get_category( $id = '' , $type = 'object' )
-    {
-		if($id!='')
-	    $this->db->where( 'id', $id );
-		
-        $query = $this->db->get( 'about_category' );
-        if ( $type == 'object' ) 
-        {
-            $data = $query->row();
-        }
-        else
-        {
-            $data = $query->row_array();
-        }
-        return $data;
     
-    } // END FUNCTION get_category
-	
-    public function add_category($info ,$id = '')
-    {
-		
-		if($id==''){
-        // INSERT DATA get_category
-        $this->db->insert( 'about_category', $info );
-        $id = $this->db->insert_id();
-		}else{
-        $this->db->where( 'id', $id );
-        // UPDATE DATA get_category
-        $this->db->update( 'about_category', $info );
-		}
-
-
-        return $id;
-    
-    } // END FUNCTION add_category	
-	
-    public function list_category( $language_id = '' , $type = 'object' )
-    {
-    
-        $this->db->where( 'language_id', $language_id );
-        $query = $this->db->get( 'about_category' );
-
-        if ( $type == 'object' ) 
-        {
-            $data = $query->result();
-        }
-        else
-        {
-            $data = $query->result_array();
-        }
-
-        return $data;
-    
-    } // END FUNCTION list_category
-	
-    public function del_category( $id = '')
-    {
-    
-        $this->db->where( 'id', $id );
-        $this->db->delete( 'about_category' );
-    
-    } // END FUNCTION del_category	
-
-	public function get_subcategory( $id = '' , $type = 'object' )
-    {
-		if($id!='')
-	    $this->db->where( 'id', $id );
-        $query = $this->db->get( 'about_subcategory' );
-        if ( $type == 'object' ) 
-        {
-            $data = $query->row();
-        }
-        else
-        {
-            $data = $query->row_array();
-        }
-        return $data;		
-    
-    } // END FUNCTION get_category
-	
-    public function add_subcategory($info ,$id = '')
-    {
-		
-		if($id==''){
-        // INSERT DATA get_subcategory
-        $this->db->insert( 'about_subcategory', $info );
-        $id = $this->db->insert_id();
-		}else{
-        $this->db->where( 'id', $id );
-        // UPDATE DATA get_subcategory
-        $this->db->update( 'about_subcategory', $info );
-		}
-
-
-        return $id;
-    
-    } // END FUNCTION add_category	
-	
-    public function list_subcategory( $language_id = '' , $type = 'object' )
-    {
-    
-        $this->db->where( 'language_id', $language_id );
-        $query = $this->db->get( 'about_subcategory' );
-
-        if ( $type == 'object' ) 
-        {
-            $data = $query->result();
-        }
-        else
-        {
-            $data = $query->result_array();
-        }
-
-        return $data;
-    
-    } // END FUNCTION list_subcategory
-	
-    public function del_subcategory( $id = '')
-    {
-    
-        $this->db->where( 'id', $id );
-        $this->db->delete( 'about_subcategory' );
-    
-    } // END FUNCTION del_category
-
-	
     public function get_gallery( $id = '' , $type = 'object' )
     {
     
@@ -339,7 +214,6 @@ class about_model extends CI_Model
     }
 
 
-
     public function update_view( $id = '' )
     {
         $this->db->where( 'id', $id );
@@ -348,46 +222,6 @@ class about_model extends CI_Model
     }
 
 
-
-    // // check url slug in database has empty
-    // public function check_slug_empty( $info = '' )
-    // {
-    //     $this->db->where( 'slug', $info );
-    //     $query = $this->db->get( 'content' );
-    //     $data = $query->result();
-
-    //     if ( ! empty( $data ) ) 
-    //     {
-    //         return count( $data );
-    //     }
-
-    //     return 0;
-
-    // }
-
-    // // chek slug have in id it
-    // public function check_slug( $id = '' , $info = '' )
-    // {
-    //     $this->db->where( 'id', $id );
-    //     $this->db->where( 'slug', $info );
-    //     $query = $this->db->get( 'content' );
-    //     $data = $query->result();
-    //     if ( ! empty( $data ) ) 
-    //     {
-    //         return FALSE;
-    //     }
-    //     return TRUE;
-    // }
-
-
-    /**
-     * Generate slug url for article, check other record in database
-     * ensure we get a unique url for each article, append duplicate number if neccessary
-     *
-     * @param String  $title     object name represention, eg. category name, article title , whatever
-     * @param Integer $object_id id of object itselves
-     * @return String
-     **/
     public function generate_slug($title, $object_id = NULL)
     {
         $title = make_url($title, 255);

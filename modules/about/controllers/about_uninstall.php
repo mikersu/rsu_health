@@ -19,19 +19,19 @@ class about_uninstall extends admin_controller {
 	function index() {
 		//uninstall module
 		if ( $this->db->table_exists( 'about_category' ) ) {
-			$sql = 'DROP TABLE '.$this->db->dbprefix('about_category').';';
+			$sql = 'DROP TABLE `'.$this->db->dbprefix('about_category').'`;';
 			$this->db->query( $sql );
 		}
 		if ( $this->db->table_exists( 'about_config' ) ) {
-			$sql = 'DROP TABLE '.$this->db->dbprefix('about_config').';';
+			$sql = 'DROP TABLE `'.$this->db->dbprefix('about_config').'`;';
 			$this->db->query( $sql );
 		}
 		if ( $this->db->table_exists( 'about_detail' ) ) {
-			$sql = 'DROP TABLE '.$this->db->dbprefix('about_detail').';';
+			$sql = 'DROP TABLE `'.$this->db->dbprefix('about_detail').'`;';
 			$this->db->query( $sql );
 		}
 		if ( $this->db->table_exists( 'about_gallery' ) ) {
-			$sql = 'DROP TABLE '.$this->db->dbprefix('about_gallery').';';
+			$sql = 'DROP TABLE `'.$this->db->dbprefix('about_gallery').'`;';
 			$this->db->query( $sql );
 		}
 

@@ -81,15 +81,6 @@
                                         </div>
                                     </div>
 
-                                    <div class="control-group">
-                                        <label class="control-label">Status</label>
-                                        <div class="controls">
-                                            <div class="basic-toggle-button">
-                                                <input name="status" type="checkbox" class="toggle" <?php echo $status = ( ! empty( $show_data['status'] ) ) ? 'checked="checked"' : '' ; ?> value="1" />
-                                            </div>
-                                        </div>
-                                    </div>
-
                                     <div class="control-group display_none">
                                         <label class="control-label">Health_new Date</label>
 
@@ -145,6 +136,15 @@
 
             <!--# END BLOCK COMMENT HTML BOX CONTENT #-->
 
+        </div>
+
+         <div class="control-group">
+            <label class="control-label">Status</label>
+            <div class="controls">
+                <div class="basic-toggle-button">
+                    <input name="status" type="checkbox" class="toggle" <?php echo $status = ( ! empty( $show_data['status'] ) ) ? 'checked="checked"' : '' ; ?> value="1" />
+                </div>
+            </div>
         </div>
 
         <div class="">

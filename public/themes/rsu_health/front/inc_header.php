@@ -203,50 +203,42 @@
                                                     <a href="home">หน้าแรก</a>
                                                 </li>
                                                 <li class="dropdown">
-                                                    <a href="about" class="dropdown-toggle" data-toggle="dropdown">เกี่ยวกับเรา</a>
+                                                    <a href="<?php echo site_url('about') ?>" class="dropdown-toggle" data-toggle="dropdown">เกี่ยวกับเรา</a>
                                                     <ul class="dropdown-menu">
-                                                        <li ><a href="about">หน่วยงาน</a></li>
-                                                        <li ><a href="manager">บุคลากร</a></li>
-                                                        <li ><a href="contact">ติดต่อเรา</a></li>
-                                                        <li ><a href="related">เว็บไซต์ที่เกี่ยวข้อง</a></li>
+                                                        <li ><a href="<?php echo site_url('about') ?>">หน่วยงาน</a></li>
+                                                        <li ><a href="<?php echo site_url('manager') ?>">บุคลากร</a></li>
+                                                        <li ><a href="<?php echo site_url('contact') ?>">ติดต่อเรา</a></li>
+                                                        <li ><a href="<?php echo site_url('related') ?>">เว็บไซต์ที่เกี่ยวข้อง</a></li>
                                                     </ul>
                                                 </li>
                                                 <li class="dropdown ">
-                                                    <a href="health_unit" class="dropdown-toggle" data-toggle="dropdown" >บริการของเรา</a>
+                                                    <a href="<?php echo site_url('health_unit') ?>" class="dropdown-toggle" data-toggle="dropdown" >บริการของเรา</a>
                                                     <ul class="dropdown-menu">
-                                                        <li ><a href="health_unit">หน่วยบริการสุขภาพ</a></li>
-                                                        <li ><a href="safety">ขั้นตอนการพบแพทย์</a></li>
-                                                        <li ><a href="care_unit">หน่วยรักษาพยาบาล</a></li>
-                                                        <li ><a href="pcu_unit">หน่วยบริการปฐมภูมิ</a></li>
-                                                        <li ><a href="universal_card">บัตรประกันสุขภาพถ้วนหน้า</a></li>
+                                                        <li ><a href="<?php echo site_url('health_unit') ?>">หน่วยบริการสุขภาพ</a></li>
+                                                        <li ><a href="<?php echo site_url('safety') ?>">ขั้นตอนการพบแพทย์</a></li>
+                                                        <li ><a href="<?php echo site_url('care_unit') ?>">หน่วยรักษาพยาบาล</a></li>
+                                                        <li ><a href="<?php echo site_url('pcu_unit') ?>">หน่วยบริการปฐมภูมิ</a></li>
+                                                        <li ><a href="<?php echo site_url('universal_card') ?>">บัตรประกันสุขภาพถ้วนหน้า</a></li>
                                                     </ul>     
                                                 </li>        
                                                 <li class="dropdown">
-                                                    <a href="health_consu">ปรึกษาปัญหาสุขภาพ</a>
+                                                    <a href="<?php echo site_url('health_consu') ?>">ปรึกษาปัญหาสุขภาพ</a>
                                                 </li>
                                                 <li class="dropdown ">
-                                                    <a href="info" class="dropdown-toggle" data-toggle="dropdown">ข่าวสาร&กิจกรรม</a>
+                                                    <a href="<?php echo site_url('info') ?>" class="dropdown-toggle" data-toggle="dropdown">ข่าวสาร&กิจกรรม</a>
                                                     <ul class="dropdown-menu">
-                                                        <li ><a href="info">ข่าวสาร</a></li>
-                                                        <li ><a href="activity">กิจกรรม</a></li>
+                                                        <li ><a href="<?php echo site_url('info') ?>">ข่าวสาร</a></li>
+                                                        <li ><a href="<?php echo site_url('activity') ?>">กิจกรรม</a></li>
                                                     </ul>
                                                 </li>
                                                 <li class="dropdown ">
-                                                    <a href="health_new" class="dropdown-toggle" data-toggle="dropdown">จุลสารสุขภาพ</a>
-                                                    <ul class="dropdown-menu">
-                                                        <li ><a href="health_new">จุลสารสุขภาพ</a></li>
-                                                        <li ><a href="health_mental">จุลสารสุขภาพจิต</a></li>
-                                                    </ul>
+                                                    <a href="<?php echo site_url('health_new') ?>">จุลสารสุขภาพ</a>
                                                 </li>
                                                 <li class="dropdown ">
-                                                    <a href="qa_evaluation" class="dropdown-toggle" data-toggle="dropdown">เอกสาร QA</a>
-                                                    <ul class="dropdown-menu">
-                                                        <li ><a href="qa_evaluation">สรุปการประเมินประจำปี</a></li>
-                                                        <li ><a href="qa_form">แบบฟอร์ม QA</a></li>
-                                                    </ul>
+                                                    <a href="<?php echo site_url('qa_evaluation') ?>" >เอกสาร QA</a>
                                                 </li>
                                                 <li class="dropdown">
-                                                    <a href="login">เข้าสู่ระบบ</a>
+                                                    <a href="<?php echo site_url('login') ?>">เข้าสู่ระบบ</a>
                                                 </li>
                                             </ul>
                                             <!-- main-menu end -->

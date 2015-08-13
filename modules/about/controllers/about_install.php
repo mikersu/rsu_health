@@ -76,7 +76,7 @@ class about_install extends admin_controller {
 					) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;';
 			$this->db->query( $sql );
 		}
-				/*
+				
 		if ( !$this->db->table_exists( 'about_gallery' ) ) {
 			$sql = 'CREATE TABLE IF NOT EXISTS `'.$this->db->dbprefix('about_gallery').'` (
 					  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -88,7 +88,7 @@ class about_install extends admin_controller {
 			$this->db->query( $sql );
 		}
 
-*/
+
 
 		$this->db->set( 'module_install', '1' );
 		$this->db->where( 'module_system_name', $this->module_system_name );
